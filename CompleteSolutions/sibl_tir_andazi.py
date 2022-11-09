@@ -1,8 +1,8 @@
 p = int(input())
 
 if p == 0:
- print("out")
+    print("out")
 elif p > 6:
- print("black")
+    print("black")
 else:
- print("white")
+    print("white")

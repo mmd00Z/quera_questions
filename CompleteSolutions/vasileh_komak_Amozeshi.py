@@ -1,17 +1,17 @@
 n = input()
-keys  = list(map(int, input().split()))
+keys = list(map(int, input().split()))
 stats = list(map(int, input().split()))
 
 lights_on = []
 
 for i in range(len(keys)):
- if not not stats[i]:
-  lights_on.append(keys[i])
- 
+    if not not stats[i]:
+        lights_on.append(keys[i])
+
 lights_on.sort()
 
 for i in range(len(lights_on)):
- print(lights_on[i], end=" ")
+    print(lights_on[i], end=" ")
 
 
 # cpp code 👇👇
@@ -42,7 +42,7 @@ for i in range(len(lights_on)):
 #   }
 #  }
 
- 
+
 #  int temp;
 #  for(int i=0; i<n_lights_on; i++)
 #  {

@@ -7,13 +7,26 @@ int main()
 	unsigned int xMoosh, xLaneMoosh;
 	cin >> xMoosh >> xLaneMoosh;
 
-	if(xLaneMoosh == xMoosh){cout << "Saal Noo Mobarak!" <<endl; return 0;}
+	if (xLaneMoosh == xMoosh)
+	{
+		cout << "Saal Noo Mobarak!" << endl;
+		return 0;
+	}
 	else
 	{
-		while(xLaneMoosh != xMoosh){
-			if(xLaneMoosh > xMoosh) {cout << 'R'; xMoosh++;}
-			else {cout << 'L'; xMoosh--;}
+		while (xLaneMoosh != xMoosh)
+		{
+			if (xLaneMoosh > xMoosh)
+			{
+				cout << 'R';
+				xMoosh++;
+			}
+			else
+			{
+				cout << 'L';
+				xMoosh--;
+			}
 		}
 	}
-    return 0;
+	return 0;
 }

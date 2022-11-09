@@ -7,11 +7,12 @@ int main()
 {
 	int a[3];
 	int b[3];
-    int out=0;
-	for(int i=0; i<3; i++){
+	int out = 0;
+	for (int i = 0; i < 3; i++)
+	{
 		cin >> a[i] >> b[i];
 		out += min(a[i], b[i]);
 	}
-    cout << out <<endl;
-    return 0;
+	cout << out << endl;
+	return 0;
 }

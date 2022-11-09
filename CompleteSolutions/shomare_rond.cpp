@@ -5,33 +5,56 @@
 using namespace std;
 bool is_rond(string str)
 {
-	for(int i=0; i<6; i++){
-		if(str[i] == str[i+1] && str[i] == str[i+2]) {return true;}
-	}
-	int ni=0;
-	for(int i=0; i<8; i++){
-		for(int j=0; j<8; j++){
-			if(str[i] == str[j]){ni++;}
+	for (int i = 0; i < 6; i++)
+	{
+		if (str[i] == str[i + 1] && str[i] == str[i + 2])
+		{
+			return true;
 		}
-		if(ni >= 4){return true;}
+	}
+	int ni = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 8; j++)
+		{
+			if (str[i] == str[j])
+			{
+				ni++;
+			}
+		}
+		if (ni >= 4)
+		{
+			return true;
+		}
 		ni = 0;
 	}
 	string strTest = str;
-	reverse(strTest.begin(),strTest.end());
-	if(strTest == str){return true;}
+	reverse(strTest.begin(), strTest.end());
+	if (strTest == str)
+	{
+		return true;
+	}
 	return false;
 }
 int main()
 {
 	int t;
 	cin >> t;
-    string str[t];
-    for(int i=0; i<t; i++){
+	string str[t];
+	for (int i = 0; i < t; i++)
+	{
 		cin >> str[i];
-    }
-	for(int i=0; i<t; i++){
-		if(is_rond(str[i])){cout << "Ronde!" << endl;}
-		else {cout << "Rond Nist" << endl;}
 	}
-    return 0;
+	for (int i = 0; i < t; i++)
+	{
+		if (is_rond(str[i]))
+		{
+			cout << "Ronde!" << endl;
+		}
+		else
+		{
+			cout << "Rond Nist" << endl;
+		}
+	}
+	return 0;
 }

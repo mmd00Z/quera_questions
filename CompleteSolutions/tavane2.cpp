@@ -7,10 +7,15 @@ int main()
     int n;
     cin >> n;
 
-    int two=2;
+    int two = 2;
 
-    while(true){
-        if(two > n) {cout << two; break;}
+    while (true)
+    {
+        if (two > n)
+        {
+            cout << two;
+            break;
+        }
         two *= 2;
     }
     return 0;

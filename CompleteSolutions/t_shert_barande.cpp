@@ -4,12 +4,18 @@ using namespace std;
 
 int main()
 {
-    int sarshaneXL=0, ghadXL=0;
-    int sarshaneInp=0, ghadInp=0;
+    int sarshaneXL = 0, ghadXL = 0;
+    int sarshaneInp = 0, ghadInp = 0;
 
     cin >> sarshaneXL >> ghadXL >> sarshaneInp >> ghadInp;
 
-    if(sarshaneInp <= sarshaneXL && ghadInp <= ghadXL){cout << "yes" <<endl;}
-    else {cout << "no" <<endl;}
+    if (sarshaneInp <= sarshaneXL && ghadInp <= ghadXL)
+    {
+        cout << "yes" << endl;
+    }
+    else
+    {
+        cout << "no" << endl;
+    }
     return 0;
 }

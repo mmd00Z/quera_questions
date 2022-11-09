@@ -9,26 +9,35 @@ int main()
     cin >> strInp;
 
     int b = 0;
-    for(int i=0; i<strInp.length(); i++){
+    for (int i = 0; i < strInp.length(); i++)
+    {
         b += strInp[i] - 48;
     }
-    //cout << b;
+    // cout << b;
     bool IsPrime = true;
     int i = 0;
     int j = stoi(strInp) + 1;
     int out;
-    while(i < b){
-        for(int k=2; k<j; k++){
-            if(j%k == 0){IsPrime = false; break;}
+    while (i < b)
+    {
+        for (int k = 2; k < j; k++)
+        {
+            if (j % k == 0)
+            {
+                IsPrime = false;
+                break;
+            }
         }
-        if(IsPrime) {
+        if (IsPrime)
+        {
             out = j;
             i++;
         }
-        else IsPrime = true;
+        else
+            IsPrime = true;
         j++;
     }
     cout << out;
-    //system("pause");
+    // system("pause");
     return 0;
 }

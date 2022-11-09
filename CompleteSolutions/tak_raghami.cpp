@@ -3,16 +3,20 @@
 using namespace std;
 int main()
 {
-	string str_numbers = "";
-	int x;
-	cin >> str_numbers;
-	long int majmoo = str_numbers[0] - 48;
-	while(str_numbers.size() > 1){
-		for(int i=1; i<str_numbers.size(); i++){majmoo += str_numbers[i] - 48;}
-		str_numbers = to_string(majmoo);
-		majmoo = str_numbers[0] - 48;
-	}
-	cout << majmoo << endl;
+    string str_numbers = "";
+    int x;
+    cin >> str_numbers;
+    long int majmoo = str_numbers[0] - 48;
+    while (str_numbers.size() > 1)
+    {
+        for (int i = 1; i < str_numbers.size(); i++)
+        {
+            majmoo += str_numbers[i] - 48;
+        }
+        str_numbers = to_string(majmoo);
+        majmoo = str_numbers[0] - 48;
+    }
+    cout << majmoo << endl;
     return 0;
 }
 /*int number(int xxx)

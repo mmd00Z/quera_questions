@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	int n=0;
+	int n = 0;
 	string str;
 	cin >> n >> str;
 
@@ -14,41 +14,63 @@ int main()
 	string stNezam;
 	string stShirF;
 
-	int i=0;
-	while(i < n){
+	int i = 0;
+	while (i < n)
+	{
 		stKeyvoon += "33";
 		stKeyvoon += "11";
 		stKeyvoon += "22";
-		i+=6;
+		i += 6;
 	}
-	i=0;
-	while(i < n){
+	i = 0;
+	while (i < n)
+	{
 		stNezam += "1";
 		stNezam += "2";
 		stNezam += "3";
-		i+=3;
+		i += 3;
 	}
-	i=0;
-	while(i < n){
+	i = 0;
+	while (i < n)
+	{
 		stShirF += "2";
 		stShirF += "1";
 		stShirF += "2";
 		stShirF += "3";
-		i+=4;
+		i += 4;
 	}
 	//////
-	int numKeyvoon=0, numNezam=0, numShirF=0;
-	for(int k=0; k<n; k++){
-		if(str[k] == stKeyvoon[k]){numKeyvoon++;}
-		if(str[k] == stNezam[k]){numNezam++;}
-		if(str[k] == stShirF[k]){numShirF++;}
+	int numKeyvoon = 0, numNezam = 0, numShirF = 0;
+	for (int k = 0; k < n; k++)
+	{
+		if (str[k] == stKeyvoon[k])
+		{
+			numKeyvoon++;
+		}
+		if (str[k] == stNezam[k])
+		{
+			numNezam++;
+		}
+		if (str[k] == stShirF[k])
+		{
+			numShirF++;
+		}
 	}
-    //cout << stKeyvoon << "\n" << stNezam << "\n" << stShirF << endl;
-	int mymax=max(max(numKeyvoon,numNezam),numShirF);
+	// cout << stKeyvoon << "\n" << stNezam << "\n" << stShirF << endl;
+	int mymax = max(max(numKeyvoon, numNezam), numShirF);
 	cout << mymax << endl;
-	if(numKeyvoon == mymax){cout << "keyvoon" << endl;}
-	if(numNezam == mymax){cout << "nezam" << endl;}
-	if(numShirF == mymax){cout << "shir farhad" << endl;}
+	if (numKeyvoon == mymax)
+	{
+		cout << "keyvoon" << endl;
+	}
+	if (numNezam == mymax)
+	{
+		cout << "nezam" << endl;
+	}
+	if (numShirF == mymax)
+	{
+		cout << "shir farhad" << endl;
+	}
 
-    return 0;
+	return 0;
 }

@@ -8,16 +8,16 @@ int main()
     string str1;
     string str2;
 
-    int n_coori=0;
+    int n_coori = 0;
 
     cin >> n >> str1 >> str2;
 
-    for (int i=0 ; i<n ; i++)
+    for (int i = 0; i < n; i++)
     {
-        if(str1[i] != str2[i]) n_coori++;
+        if (str1[i] != str2[i])
+            n_coori++;
     }
-     cout << n_coori;
-
+    cout << n_coori;
 
     return 0;
 }
