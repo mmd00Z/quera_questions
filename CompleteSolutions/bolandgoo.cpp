@@ -11,17 +11,14 @@ int main()
 
     int len = strlen(input);
 
-    for (int i=0 ; i<len ; i++)
+    for (int i = 0; i < len; i++)
     {
-        for (int j=i ; j>=0 ; j--)
+        for (int j = i; j >= 0; j--)
         {
-            input[j]=input[i];
+            input[j] = input[i];
         }
         cout << input << endl;
     }
-
-
-
 
     return 0;
 }

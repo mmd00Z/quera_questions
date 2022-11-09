@@ -4,23 +4,25 @@ using namespace std;
 
 int main()
 {
-    int x1 , x2;
-    cin >> x1 >> x2;
+  int x1, x2;
+  cin >> x1 >> x2;
 
-    int yekan1   = (x1 / 100)%10;
-    int dahgan1  =(x1 / 10)%10;
-    int sadgan1  = x1 % 10;
-    int xxx1 = (sadgan1 * 100) + (dahgan1 * 10) + yekan1;
+  int yekan1 = (x1 / 100) % 10;
+  int dahgan1 = (x1 / 10) % 10;
+  int sadgan1 = x1 % 10;
+  int xxx1 = (sadgan1 * 100) + (dahgan1 * 10) + yekan1;
 
-    int yekan2   = (x2 / 100)%10;
-    int dahgan2  =(x2 / 10)%10;
-    int sadgan2  = x2 % 10;
-    int xxx2 = (sadgan2 * 100) + (dahgan2 * 10) + yekan2;
+  int yekan2 = (x2 / 100) % 10;
+  int dahgan2 = (x2 / 10) % 10;
+  int sadgan2 = x2 % 10;
+  int xxx2 = (sadgan2 * 100) + (dahgan2 * 10) + yekan2;
 
-    if (xxx1 < xxx2) cout << x1 << " < " << x2;
-     else if (xxx2 < xxx1) cout << x2 << " < " << x1;
-      else cout << x1 << " = " << x2;
+  if (xxx1 < xxx2)
+    cout << x1 << " < " << x2;
+  else if (xxx2 < xxx1)
+    cout << x2 << " < " << x1;
+  else
+    cout << x1 << " = " << x2;
 
-
-    return 0;
+  return 0;
 }

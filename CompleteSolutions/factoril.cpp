@@ -9,7 +9,7 @@ int main()
     int output = 1;
     cin >> n;
 
-    for (int i=n ; i>1 ; i--)
+    for (int i = n; i > 1; i--)
     {
         output *= i;
     }
@@ -18,8 +18,7 @@ int main()
     {
         output *= i;
     }*/
-     cout << output;
-
+    cout << output;
 
     return 0;
 }

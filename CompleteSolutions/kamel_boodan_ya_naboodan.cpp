@@ -9,14 +9,18 @@ int main()
 
     int maj_maghsoms = 0;
     int i = 1;
-    while(i<n){
-        if(n%i == 0){
+    while (i < n)
+    {
+        if (n % i == 0)
+        {
             maj_maghsoms += i;
         }
         i++;
     }
-    if(maj_maghsoms == n) cout << "YES";
-    else cout << "NO";
+    if (maj_maghsoms == n)
+        cout << "YES";
+    else
+        cout << "NO";
 
     return 0;
 }

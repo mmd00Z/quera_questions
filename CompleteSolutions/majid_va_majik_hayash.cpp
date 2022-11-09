@@ -5,25 +5,44 @@ using namespace std;
 
 int main()
 {
-	int n=0;
+	int n = 0;
 	cin >> n;
 	int arr[n];
-	for(int i=0; i<n; i++){ cin >> arr[i]; }
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+	}
 
 	int minOut = 1;
-	int out=arr[0];
-	for(int i=1; i<n; i++){
-		if(arr[0] == arr[i]){minOut++;}
-	}
-	int minX =1;
-	for(int i=1; i<n; i++){
-		for(int j=0; j<n; j++){
-			if(arr[i] == arr[j]){minX++;}
+	int out = arr[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (arr[0] == arr[i])
+		{
+			minOut++;
 		}
-		if(minOut == minX-1) {out = min(out, arr[i]); }
-		else if(minOut > minX-1){out = arr[i]; minOut = minX-1; }
+	}
+	int minX = 1;
+	for (int i = 1; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (arr[i] == arr[j])
+			{
+				minX++;
+			}
+		}
+		if (minOut == minX - 1)
+		{
+			out = min(out, arr[i]);
+		}
+		else if (minOut > minX - 1)
+		{
+			out = arr[i];
+			minOut = minX - 1;
+		}
 		minX = 1;
 	}
 	cout << out << endl;
-    return 0;
+	return 0;
 }

@@ -3,4 +3,4 @@ import math
 
 day, num = list(map(int, input().split()))
 
-print(str(math.factorial(day)).count(str(num))) 
+print(str(math.factorial(day)).count(str(num)))

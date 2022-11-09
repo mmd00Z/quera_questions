@@ -4,25 +4,41 @@ using namespace std;
 
 int main()
 {
-	long int n=0, m=0;
+	long int n = 0, m = 0;
 	cin >> n >> m;
 	string str1[n];
 	string str2[n];
 
-	for(int i=0; i<n; i++){ cin >> str1[i]; }
-    for(int i=0; i<n; i++){ cin >> str2[i]; }
-	int t1=0;
-	for(int i=0; i<n; i++){
-		for(int j=0; j<m; j++){
-			if(str1[i][j] == '*'){t1++;}
+	for (int i = 0; i < n; i++)
+	{
+		cin >> str1[i];
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cin >> str2[i];
+	}
+	int t1 = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (str1[i][j] == '*')
+			{
+				t1++;
+			}
 		}
 	}
-	int t2=0;
-	for(int i=0; i<n; i++){
-		for(int j=0; j<m; j++){
-			if(str2[i][j] == '*'){t2++;}
+	int t2 = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (str2[i][j] == '*')
+			{
+				t2++;
+			}
 		}
 	}
 	cout << t1 << " " << t2 << endl;
-    return 0;
+	return 0;
 }

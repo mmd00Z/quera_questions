@@ -5,7 +5,13 @@ int main()
 {
 	int nRadif, nSandali;
 	cin >> nRadif >> nSandali;
-	if(nSandali <= 10){ cout << "Right " << 11-nRadif << " " << nSandali; }
-	else { cout << "Left " << 11-nRadif << " " << 21-nSandali; }
-    return 0;
+	if (nSandali <= 10)
+	{
+		cout << "Right " << 11 - nRadif << " " << nSandali;
+	}
+	else
+	{
+		cout << "Left " << 11 - nRadif << " " << 21 - nSandali;
+	}
+	return 0;
 }

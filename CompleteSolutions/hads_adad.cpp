@@ -7,16 +7,28 @@ int main()
 	int q;
 	cin >> q;
 	int arr[q];
-	for(int i=0; i<q; i++){cin >> arr[i];}
+	for (int i = 0; i < q; i++)
+	{
+		cin >> arr[i];
+	}
 	bool check = true;
 	int out = 0;
-	for(int i=1; i<=1000; i++){
-		for(int j=0; j<q; j++){
-			if(i%arr[j]!=0){check = false; break;}
+	for (int i = 1; i <= 1000; i++)
+	{
+		for (int j = 0; j < q; j++)
+		{
+			if (i % arr[j] != 0)
+			{
+				check = false;
+				break;
+			}
 		}
-		if(check){out++;}
+		if (check)
+		{
+			out++;
+		}
 		check = true;
 	}
 	cout << out;
-    return 0;
+	return 0;
 }

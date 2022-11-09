@@ -13,15 +13,19 @@ int main()
     cin >> str;
 
     string charkh[inp];
-    for(int i=0; i<inp; i++){
+    for (int i = 0; i < inp; i++)
+    {
         cin >> charkh[i];
     }
 
-    int out=0;
-    for(int i=0; i<inp; i++){
-        for(int j=0; j<9; j++){
-            if(str[i]==charkh[i][j]){
-                out += min(j,9-j);
+    int out = 0;
+    for (int i = 0; i < inp; i++)
+    {
+        for (int j = 0; j < 9; j++)
+        {
+            if (str[i] == charkh[i][j])
+            {
+                out += min(j, 9 - j);
                 break;
             }
         }

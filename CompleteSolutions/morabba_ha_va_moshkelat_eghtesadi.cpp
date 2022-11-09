@@ -7,10 +7,11 @@ int main()
 	cin >> n >> k;
 	int arr[n];
 	unsigned long int majmoo = 0;
-	for(int i=0; i<n; i++){
+	for (int i = 0; i < n; i++)
+	{
 		cin >> arr[i];
 		majmoo += k - arr[i];
 	}
-	cout << majmoo/k << endl;
-    return 0;
+	cout << majmoo / k << endl;
+	return 0;
 }

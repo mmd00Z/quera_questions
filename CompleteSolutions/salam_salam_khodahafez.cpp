@@ -7,25 +7,25 @@ int main()
     int n;
     cin >> n;
     string names[n];
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> names[i];
     }
     for (int i = 1; i < n; i++)
     {
         for (int j = 0; j < i; j++)
         {
-            cout << names[i]+": salam "+names[i-(j+1)]+"!\n";
+            cout << names[i] + ": salam " + names[i - (j + 1)] + "!\n";
         }
     }
     for (int i = 0; i < n; i++)
     {
-        cout << names[i]+": khodafez bacheha!\n";
-        for (int j = i+1; j < n; j++)
+        cout << names[i] + ": khodafez bacheha!\n";
+        for (int j = i + 1; j < n; j++)
         {
-            cout << names[j]+": khodafez "+names[i]+"!\n";
+            cout << names[j] + ": khodafez " + names[i] + "!\n";
         }
-        
     }
-    //system("pause");
+    // system("pause");
     return 0;
 }

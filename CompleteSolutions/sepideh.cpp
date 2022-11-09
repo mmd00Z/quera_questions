@@ -5,9 +5,9 @@ using namespace std;
 
 int main()
 {
-   long int num_daneshjoo=0, numDar=0;
-   cin >> num_daneshjoo >> numDar;
+    long int num_daneshjoo = 0, numDar = 0;
+    cin >> num_daneshjoo >> numDar;
 
-   cout << round(double(num_daneshjoo) / double(numDar));
+    cout << round(double(num_daneshjoo) / double(numDar));
     return 0;
 }

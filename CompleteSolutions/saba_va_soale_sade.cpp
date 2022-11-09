@@ -8,8 +8,9 @@ int main()
     int k;
     float n;
     cin >> n >> k;
-    for(int i=0; i<k; i++){
-        n = n/2;
+    for (int i = 0; i < k; i++)
+    {
+        n = n / 2;
     }
     cout << floor(n);
     return 0;

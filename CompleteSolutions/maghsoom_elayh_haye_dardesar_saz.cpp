@@ -5,9 +5,17 @@ int main()
 {
 	int n = 0, n_maghsom_elayh = 0, majmoo_maghsom_elayh = 0;
 	cin >> n;
-	for(int i=1; i<=n; i++){
-		for(int j=1; j<=i; j++){ if(i%j == 0){n_maghsom_elayh++; majmoo_maghsom_elayh += j;} }
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			if (i % j == 0)
+			{
+				n_maghsom_elayh++;
+				majmoo_maghsom_elayh += j;
+			}
+		}
 	}
 	cout << n_maghsom_elayh << " " << majmoo_maghsom_elayh << endl;
-    return 0;
+	return 0;
 }

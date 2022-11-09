@@ -1,2 +1,2 @@
 # https://quera.org/problemset/123798/
-print("Hello CodeCup {}!".format(input())) # 😐😐😐
+print("Hello CodeCup {}!".format(input()))  # 😐😐😐

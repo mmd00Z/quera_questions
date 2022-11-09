@@ -5,33 +5,41 @@ using namespace std;
 int main()
 {
     int start; // ebteda ye baze
-    int end_; // enteha ye baze
+    int end_;  // enteha ye baze
     int n;
     int zed = 0;
     int newLine = 0;
     cin >> start >> end_;
 
-    while (start <= end_){
+    while (start <= end_)
+    {
         n = 2;
-        if (start == 1){
+        if (start == 1)
+        {
             zed = 1;
-        }else
+        }
+        else
         {
             zed = 0;
-            while (n < start){
-                if (start % n == 0){
-                zed = 1;
-                n = start + 1;
-            }else {
-                n = n + 1;
-                zed = 0;
+            while (n < start)
+            {
+                if (start % n == 0)
+                {
+                    zed = 1;
+                    n = start + 1;
                 }
-        }
-            if (zed == 0){
-            cout << start <<endl;
-        }
+                else
+                {
+                    n = n + 1;
+                    zed = 0;
+                }
+            }
+            if (zed == 0)
+            {
+                cout << start << endl;
+            }
         }
         start++;
-        }
+    }
     return 0;
 }

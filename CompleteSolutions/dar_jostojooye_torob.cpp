@@ -5,17 +5,35 @@ int main()
 {
 	int x1, x2, v1, v2; // x1:xAli | v1:vAli | x2:xTorob | v1:vTorob
 	cin >> x1 >> v1 >> x2 >> v2;
-	if(x1 > x2)
+	if (x1 > x2)
 	{
-		if(v1 > v2) {cout << "BORO BORO" << endl;}
-		else if(v1 < v2) {cout << "SEE YOU" << endl;}
-		else {cout << "WAIT WAIT" << endl;} // else: v1 == v2
+		if (v1 > v2)
+		{
+			cout << "BORO BORO" << endl;
+		}
+		else if (v1 < v2)
+		{
+			cout << "SEE YOU" << endl;
+		}
+		else
+		{
+			cout << "WAIT WAIT" << endl;
+		} // else: v1 == v2
 	}
 	else
 	{
-		if(v1 > v2) {cout << "SEE YOU" << endl;}
-		else if(v1 < v2) {cout << "BORO BORO" << endl;}
-		else {cout << "WAIT WAIT" << endl;} // else: v1 == v2
+		if (v1 > v2)
+		{
+			cout << "SEE YOU" << endl;
+		}
+		else if (v1 < v2)
+		{
+			cout << "BORO BORO" << endl;
+		}
+		else
+		{
+			cout << "WAIT WAIT" << endl;
+		} // else: v1 == v2
 	}
-    return 0;
+	return 0;
 }

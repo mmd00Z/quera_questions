@@ -7,6 +7,6 @@ int main()
 	double k;
 	long p;
 	cin >> n >> k >> p;
-	cout << n*k*p;
-    return 0;
+	cout << n * k * p;
+	return 0;
 }

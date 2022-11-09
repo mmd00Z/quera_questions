@@ -6,11 +6,21 @@ int main()
 	long n, k;
 	cin >> n >> k;
 	int arrc[n];
-	for(int i=0; i<n; i++){cin >> arrc[i];}
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arrc[i];
+	}
 
 	unsigned long sum = 0;
-	for(int i= 0; i<n; i++){sum += arrc[i];}
-	if(sum >= k){cout << "YES" << endl; return 0;}
+	for (int i = 0; i < n; i++)
+	{
+		sum += arrc[i];
+	}
+	if (sum >= k)
+	{
+		cout << "YES" << endl;
+		return 0;
+	}
 	cout << "NO" << endl;
-    return 0;
+	return 0;
 }

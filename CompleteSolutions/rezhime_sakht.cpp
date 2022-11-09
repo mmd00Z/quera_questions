@@ -4,21 +4,25 @@ using namespace std;
 
 int main()
 {
-    int r=0 , g=0 ,y=0;
+    int r = 0, g = 0, y = 0;
     string input;
 
     cin >> input;
 
-    for (int i=0 ; i<5 ; i++)
+    for (int i = 0; i < 5; i++)
     {
-        if (input[i] == 'Y') y++;
-         else if (input[i] == 'R') r++;
-          else if (input[i] == 'G') g++;
+        if (input[i] == 'Y')
+            y++;
+        else if (input[i] == 'R')
+            r++;
+        else if (input[i] == 'G')
+            g++;
     }
 
-    if ( r>=3 || (r>=2 && y>=2) || y ==5 || g == 0) cout << "nakhor lite";
-     else cout << "rahat baash";
-
+    if (r >= 3 || (r >= 2 && y >= 2) || y == 5 || g == 0)
+        cout << "nakhor lite";
+    else
+        cout << "rahat baash";
 
     return 0;
 }

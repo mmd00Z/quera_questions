@@ -8,7 +8,7 @@ for i in range(n):
     for j in range(n):
         if a[i] == a[j] and i != j:
             is_yekta = False
-            break;
+            break
     if is_yekta:
         yekta_ha.append(a[i])
 

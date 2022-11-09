@@ -7,16 +7,19 @@ int main()
 	long int n;
 	cin >> n;
 	long int arr[n];
-	for(int i=0; i<n; i++){
+	for (int i = 0; i < n; i++)
+	{
 		cin >> arr[i];
 	}
 
-	for(int i=1; i<(n-1); i++){
-		if(arr[i] > arr[i-1] && arr[i] > arr[i+1]){
+	for (int i = 1; i < (n - 1); i++)
+	{
+		if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])
+		{
 			cout << "Ey baba :(" << endl;
 			return 0;
 		}
 	}
 	cout << "Bah Bah! Ajab jooji!" << endl;
-    return 0;
+	return 0;
 }

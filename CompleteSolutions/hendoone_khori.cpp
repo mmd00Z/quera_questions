@@ -8,9 +8,20 @@ int main()
 	cin >> n;
 	int w[n];
 	int w_prin[n];
-	for(int i=0; i<n; i++){cin >> w[i]; w_prin[i] = w[i];}
-    sort(w_prin, w_prin+n);
-    //for(int i=0; i<n; i++) {cout << w_prin[i] << "\t";}
-	for(int i=0; i<n; i++){ if(w[i] == w_prin[n-1]) {cout << i+1 << endl; break;} }
-    return 0;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> w[i];
+		w_prin[i] = w[i];
+	}
+	sort(w_prin, w_prin + n);
+	// for(int i=0; i<n; i++) {cout << w_prin[i] << "\t";}
+	for (int i = 0; i < n; i++)
+	{
+		if (w[i] == w_prin[n - 1])
+		{
+			cout << i + 1 << endl;
+			break;
+		}
+	}
+	return 0;
 }

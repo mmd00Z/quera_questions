@@ -37,7 +37,11 @@ int main()
     if(pow(side.c ,2) == (pow(side.a ,2) + pow(side.b ,2))) {cout << "YES";}
     else cout << "NO";*/
 
-    if(pow(inp1 ,2) == (pow(inp2 ,2) + pow(inp3 ,2)) || pow(inp2 ,2) == (pow(inp3 ,2) + pow(inp1 ,2)) || pow(inp3 ,2) == (pow(inp2 ,2) + pow(inp1 ,2))) {cout << "YES";}
-    else cout << "NO";
+    if (pow(inp1, 2) == (pow(inp2, 2) + pow(inp3, 2)) || pow(inp2, 2) == (pow(inp3, 2) + pow(inp1, 2)) || pow(inp3, 2) == (pow(inp2, 2) + pow(inp1, 2)))
+    {
+        cout << "YES";
+    }
+    else
+        cout << "NO";
     return 0;
 }

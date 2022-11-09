@@ -7,10 +7,15 @@ int main()
     int n = 0, k = 0, i = 1;
     cin >> n >> k;
     unsigned int n_marahel = 1;
-    while(true){
+    while (true)
+    {
         i += k;
-        if(i > n){i -= n;}
-        if(i == 1)break;
+        if (i > n)
+        {
+            i -= n;
+        }
+        if (i == 1)
+            break;
         n_marahel++;
     }
     cout << n_marahel << endl;

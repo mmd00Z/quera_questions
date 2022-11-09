@@ -4,16 +4,22 @@ using namespace std;
 
 int main()
 {
-    int a , b , l;
+    int a, b, l;
 
     cin >> a >> b >> l;
 
     int time = 0;
 
-    for (int i=1; i <= l; i++)
+    for (int i = 1; i <= l; i++)
     {
-        if(i%2 == 1){ time += a;}
-          else { time += b; }
+        if (i % 2 == 1)
+        {
+            time += a;
+        }
+        else
+        {
+            time += b;
+        }
     }
 
     cout << time;

@@ -5,21 +5,38 @@ using namespace std;
 
 int main()
 {
-    int a,b;
+    int a, b;
     cin >> a >> b;
 
     bool IsPrime = true;
     bool IsFirst = true;
-    for(int i=a+1; i<b; i++){
-        for(int j=2; j<i; j++){
-            if(i%j == 0) { IsPrime = false; break; }
+    for (int i = a + 1; i < b; i++)
+    {
+        for (int j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                IsPrime = false;
+                break;
+            }
         }
-        if(IsPrime) {
-            if(IsFirst){cout<<i; IsFirst = false;}
-            else {cout<< ',' << i;} 
+        if (IsPrime)
+        {
+            if (IsFirst)
+            {
+                cout << i;
+                IsFirst = false;
+            }
+            else
+            {
+                cout << ',' << i;
+            }
         }
-        else {IsPrime = true;}
+        else
+        {
+            IsPrime = true;
+        }
     }
-    //system("pause");
+    // system("pause");
     return 0;
 }
