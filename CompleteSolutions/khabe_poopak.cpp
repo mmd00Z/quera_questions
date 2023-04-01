@@ -1,20 +1,37 @@
+// https://quera.org/problemset/15124/
+// writed with chatGPT python to cpp
+
 #include <iostream>
-// حل نشده
-// https://quera.ir/problemset/contest/15124/%D8%B3%D8%A4%D8%A7%D9%84-%D8%AE%D9%88%D8%A7%D8%A8-%D9%BE%D9%88%D9%BE%DA%A9
+#include <vector>
 using namespace std;
-int main()
-{
+
+vector<int> divisors(int n) {
+    vector<int> res;
+    for(int i = 1; i <= n; i++) {
+        if(n % i == 0) {
+            res.push_back(i);
+        }
+    }
+    return res;
+}
+
+int count_pairs(vector<int> list1, vector<int> list2, int n) {
+    int count = 0;
+    for(int i = 0; i < list1.size(); i++) {
+        for(int j = 0; j < list2.size(); j++) {
+            if(list1[i] + list2[j] <= n) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+int main() {
     int a, b, x;
     cin >> a >> b >> x;
-
-    int n_maghsom_a = 0, n_maghsom_b = 0;
-    for (int i = 1; (n_maghsom_b + n_maghsom_a < x && i < x); i++)
-    {
-        n_maghsom_a += (a % i == 0) ? 1 : 0;
-        n_maghsom_b += (b % i == 0) ? 1 : 0;
-    }
-
-    cout << n_maghsom_a * n_maghsom_b << endl;
-    // system("pause");
+    vector<int> div1 = divisors(a);
+    vector<int> div2 = divisors(b);
+    cout << count_pairs(div1, div2, x) << endl;
     return 0;
 }

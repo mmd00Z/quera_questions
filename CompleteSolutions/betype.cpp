@@ -1,37 +1,28 @@
-#include <iostream>
+// https://quera.org/problemset/28948/
+// writed with chatGPT python to cpp
 
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main()
-{
-    string str;
-    cin >> str;
-    str += "  ";
-    int size = str.length();
-    for (int i = 0; i < str.length(); i++)
-    {
-        if (str[i] == '=')
-        {
-            if (i == 0)
-            {
-                for (int j = i; j < str.length(); j++)
-                {
-                    str[j] = str[j + 1];
-                }
+int main() {
+    string s;
+    cin >> s;
+
+    int i = 0;
+    while (i < s.length()) {
+        if (s[i] == '=') {
+            s.erase(i, 1);
+            if (i > 0) {
+                s.erase(i-1, 1);
             }
-            else
-            {
-                for (int j = i; j < str.length(); j++)
-                {
-                    str[j - 1] = str[j + 1];
-                }
-            }
-            i -= (i > 1) ? 2 : i + 1;
-            size -= 2;
+            // After removing two characters, decrease the index by 1
+            i -= (i > 0)? 1:0;
+        } else {
+            i++;
         }
     }
 
-    cout << str << endl;
-    // system("pause");
+    cout << s << endl;
     return 0;
 }
