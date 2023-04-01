@@ -1,34 +1,38 @@
+// https://quera.org/problemset/4066/
+// writed with chatGPT python to cpp
+
 #include <iostream>
-// https://quera.ir/problemset/contest/4066/%D8%B3%D8%A4%D8%A7%D9%84-%D9%BE%DB%8C%D8%B4%DA%AF%D9%88%DB%8C%DB%8C-%D8%AE%D8%B1
+#include <string>
+#include <map>
+#include <vector>
+
 using namespace std;
-int main()
-{
+
+int main() {
     int n, m;
     cin >> n >> m;
-    string str[n][2];
-    string st[m];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> str[i][0] >> str[i][1];
-    }
-    for (int i = 0; i < m; i++)
-    {
-        cin >> st[i];
+
+    map<string, string> dictionary;
+    string key, val;
+    for (int i = 0; i < n; i++) {
+        cin >> key >> val;
+        dictionary[key] = val;
     }
 
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (st[i] == str[j][0])
-            {
-                cout << str[j][1];
-                break;
-            }
+    vector<string> txt(m);
+    for (int i = 0; i < m; i++) {
+        cin >> txt[i];
+        if (dictionary.find(txt[i]) != dictionary.end()) {
+            txt[i] = dictionary[txt[i]] + " kachal!";
+        } else {
+            txt[i] = "kachal!";
         }
-        cout << " kachal! ";
+    }
+
+    for (auto& t : txt) {
+        cout << t << " ";
     }
     cout << endl;
-    // system("pause");
+
     return 0;
 }
